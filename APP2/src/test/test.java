@@ -67,7 +67,7 @@ public class test {
 	@Test
 	public void testInver() {
 		int[] tab={1,3,4,6,10};
-		vect vect=new vect();
+		VectorHelper vect=new vect();
 		vect.inver(tab);
 		assertEquals(10, tab[0]);
 		assertEquals(6, tab[1]);
@@ -78,7 +78,7 @@ public class test {
 	//----------------------------------------------------------------------------------------------------
 	@Test
 	public void testMaxMin() {
-		vect vect=new vect();
+		VectorHelper vect=new vect();
 		int tab[]={1,2,6,4,10,45,-5,0};
 		int t[]={0,0};
 		vect.maxMin(tab, t);
