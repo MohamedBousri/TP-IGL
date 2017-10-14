@@ -22,7 +22,8 @@ public class test {
 		assertEquals(tab[5],8);
 		assertEquals(tab[6],10);
 	}
-	
+	//----------------------------------------------------------------------------------------------------
+
 	@Test (expected = ExeptionTailleDifférente.class)
 	public void testsommer1() {
 		/* On verifier que la methode sommer lance une exception en cas ou 
@@ -38,7 +39,8 @@ public class test {
             } catch (ExeptionTailleDifférente e1){
             	}
             }
-	
+	//----------------------------------------------------------------------------------------------------
+
 	@Test 
 	public void testsommer2() {
 		/* On verifier que la methode sommer marche correctement 
@@ -60,6 +62,29 @@ public class test {
 	            	
 	            }
 	      }
+	//----------------------------------------------------------------------------------------------------
+
+	@Test
+	public void testInver() {
+		int[] tab={1,3,4,6,10};
+		vect vect=new vect();
+		vect.inver(tab);
+		assertEquals(10, tab[0]);
+		assertEquals(6, tab[1]);
+		assertEquals(4, tab[2]);
+		assertEquals(3, tab[3]);
+		assertEquals(1, tab[4]);
+	}
+	//----------------------------------------------------------------------------------------------------
+	@Test
+	public void testMaxMin() {
+		vect vect=new vect();
+		int tab[]={1,2,6,4,10,45,-5,0};
+		int t[]={0,0};
+		vect.maxMin(tab, t);
+		assertEquals(-5, t[0]);
+		assertEquals(45, t[1]);
+	}
 		
 }
 	
