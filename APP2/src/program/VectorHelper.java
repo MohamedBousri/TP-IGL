@@ -2,7 +2,8 @@ package program;
 
 import java.text.Normalizer.Form;
 
-import javafx.scene.control.Tab;
+
+
 
 public class VectorHelper {
 	
@@ -108,7 +109,7 @@ public class VectorHelper {
 	 * 
 	 */
 	@FunctionalInterface
-	interface formule{
+	public interface formule{
 		int appliquer(int a);
 	}
 	/**
@@ -124,7 +125,7 @@ public class VectorHelper {
 	public void appliquerFormuleVect(int[] tab,formule form)
 	{
 		int i=0;
-		while(i<tab.length-1)
+		while(i<tab.length)
 		{
 			tab[i]=appliquerFormule(tab[i], form);
 			i++;

@@ -26,7 +26,7 @@ public class test {
 
 	@Test (expected = ExeptionTailleDifférente.class)
 	public void testsommer1() {
-		/* On verifier que la methode sommer lance une exception en cas ou 
+		/* On verifie que la methode sommer lance une exception en cas ou 
 		 * les deux tableau nn'ont pas la méme taille
 		 */
 		VectorHelper v2 = new VectorHelper();
@@ -43,7 +43,7 @@ public class test {
 
 	@Test 
 	public void testsommer2() {
-		/* On verifier que la methode sommer marche correctement 
+		/* On verifie que la methode sommer marche correctement 
 		 */
 		VectorHelper v2 = new VectorHelper();
 		int [] tab1 = {5 , 8 , 6 , 1 , 2 , 10 , 7};
@@ -90,7 +90,7 @@ public class test {
 	public void testAppliquerFormuleVect() {
 		VectorHelper vect=new VectorHelper();
 		int[] tab={0,1,6,8,10,12};
-		VectorHelper.appliquerFormuleVect(tab, i -> i*2);
+		vect.appliquerFormuleVect(tab, i -> i*2);
 		assertEquals(0, tab[0]);
 		assertEquals(2, tab[1]);
 		assertEquals(12, tab[2]);
