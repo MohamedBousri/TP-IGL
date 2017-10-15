@@ -51,7 +51,7 @@ public class VectorHelper {
 	 * cette methode inverse les elements d'un tableau (le dernier elem devient le premier...)
 	 * @param tab " le tableau a inverser "
 	 */
-	void inverser(int[] tab)
+	public void inverser(int[] tab)
 	{
 		int i=0,j=tab.length-1;
 		int tempo=0;
@@ -70,7 +70,7 @@ public class VectorHelper {
 	 * @param tab " le tableau des donnees "
 	 * @param t " t[0] contient le minimum, t[1] contient le maximum "
 	 */
-	void maxMin(int[] tab,int[] t)
+	public void maxMin(int[] tab,int[] t)
 	{
 		
 		if (tab.length!=0)
