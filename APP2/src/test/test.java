@@ -85,7 +85,19 @@ public class test {
 		assertEquals(-5, t[0]);
 		assertEquals(45, t[1]);
 	}
-		
+	//----------------------------------------------------------------------------------------------------
+	@Test
+	public void testAppliquerFormuleVect() {
+		VectorHelper vect=new VectorHelper();
+		int[] tab={0,1,6,8,10,12};
+		VectorHelper.appliquerFormuleVect(tab, i -> i*2);
+		assertEquals(0, tab[0]);
+		assertEquals(2, tab[1]);
+		assertEquals(12, tab[2]);
+		assertEquals(16, tab[3]);
+		assertEquals(20, tab[4]);
+		assertEquals(24, tab[5]);
+	}
 }
 	
 	
