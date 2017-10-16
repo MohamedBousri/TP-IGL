@@ -13,14 +13,9 @@ public class test {
 		
 		VectorHelper v1 = new VectorHelper();
 		int [] tab = {5 , 8 , 6 , 1 , 2 , 10 , 7};
+		int [] tab2 = {1 , 2 , 5 , 6 , 7 , 8 , 10};
 		v1.tri(tab);
-		assertEquals(tab[0],1);
-		assertEquals(tab[1],2);
-		assertEquals(tab[2],5);
-		assertEquals(tab[3],6);
-		assertEquals(tab[4],7);
-		assertEquals(tab[5],8);
-		assertEquals(tab[6],10);
+		assertArrayEquals(tab2, tab);
 	}
 	//----------------------------------------------------------------------------------------------------
 
@@ -37,6 +32,7 @@ public class test {
 		v2.sommer(tab1 , tab2, tab3);
 		
             } catch (ExeptionTailleDifférente e1){
+            	System.out.println("Taille differentes des tableaus");
             	}
             }
 	//----------------------------------------------------------------------------------------------------
@@ -48,16 +44,11 @@ public class test {
 		VectorHelper v2 = new VectorHelper();
 		int [] tab1 = {5 , 8 , 6 , 1 , 2 , 10 , 7};
 		int [] tab2 = {4 , 2 , 17 , 9 , 2 , 6 , 8};
-		int [] tab3 = new int[tab1.length];
+		int [] tabExpected  = {9,10,23,10,4,16,15};
+		int [] tabResult = new int[tab1.length];
 		try {
-			v2.sommer(tab1 , tab2, tab3);
-			assertEquals(tab3[0],9);
-			assertEquals(tab3[1],10);
-			assertEquals(tab3[2],23);
-			assertEquals(tab3[3],10);
-			assertEquals(tab3[4],4);
-			assertEquals(tab3[5],16);
-			assertEquals(tab3[6],15);
+			v2.sommer(tab1 , tab2, tabResult);
+		assertArrayEquals(tabExpected, tabResult);
 	            } catch (ExeptionTailleDifférente e1){
 	            	
 	            }
@@ -67,13 +58,11 @@ public class test {
 	@Test
 	public void testInver() {
 		int[] tab={1,3,4,6,10};
+		int[] tabExpected= {10,6,4,3,1};
 		VectorHelper vect=new VectorHelper();
 		vect.inverser(tab);
-		assertEquals(10, tab[0]);
-		assertEquals(6, tab[1]);
-		assertEquals(4, tab[2]);
-		assertEquals(3, tab[3]);
-		assertEquals(1, tab[4]);
+		assertArrayEquals(tabExpected, tab);
+		
 	}
 	//----------------------------------------------------------------------------------------------------
 	@Test
@@ -90,13 +79,9 @@ public class test {
 	public void testAppliquerFormuleVect() {
 		VectorHelper vect=new VectorHelper();
 		int[] tab={0,1,6,8,10,12};
+		int[] tabExepcted={0,2,12,16,20,24};
 		vect.appliquerFormuleVect(tab, i -> i*2);
-		assertEquals(0, tab[0]);
-		assertEquals(2, tab[1]);
-		assertEquals(12, tab[2]);
-		assertEquals(16, tab[3]);
-		assertEquals(20, tab[4]);
-		assertEquals(24, tab[5]);
+		
 	}
 }
 	
