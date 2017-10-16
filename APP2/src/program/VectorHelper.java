@@ -1,9 +1,13 @@
 package program;
 
-import java.text.Normalizer.Form;
 
 
 
+/**
+ *
+ * @author Ryad and moh
+ *cette classe fornit des methodes utiles pour le traitements des vecteurs
+ */
 
 public class VectorHelper {
 	
@@ -106,21 +110,26 @@ public class VectorHelper {
 		}
 	}
 	/**
-	 * 
+	 * l' interface fonctionelle utilisée pour les expressions lambda
 	 */
 	@FunctionalInterface
 	public interface formule{
 		int appliquer(int a);
 	}
 	/**
-	 * 
+	 * @param a " entier visé par la modification de l'expression lambda "
+	 * @param form " l'expression lambda "
+	 * cette methode applique la formule form sur l 'entier a et retourne le resultat
+	 * @return   le resultat de l application de la formule sur a
 	 */
 	private int  appliquerFormule(int a,formule form)
 	{
 		return form.appliquer(a);
 	}
 	/**
-	 * 
+	 * @param tab " le tableau qu' on doit modifier les elements " 
+	 * @param form " la formule de modification "
+	 * cette methode applique la formule  form sur tous les elements du tableau tab
 	 */
 	public void appliquerFormuleVect(int[] tab,formule form)
 	{
