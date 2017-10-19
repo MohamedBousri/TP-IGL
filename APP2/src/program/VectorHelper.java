@@ -4,9 +4,9 @@ package program;
 
 
 /**
- *
+ * Cette classe fornit des methodes utiles pour le traitements des vecteurs
  * @author Ryad and moh
- *cette classe fornit des methodes utiles pour le traitements des vecteurs
+ *
  */
 
 public class VectorHelper {
