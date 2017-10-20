@@ -81,6 +81,7 @@ public class test {
 		int[] tab={0,1,6,8,10,12};
 		int[] tabExepcted={0,2,12,16,20,24};
 		vect.appliquerFormuleVect(tab, i -> i*2);
+		assertArrayEquals(tabExepcted, tab);
 		
 	}
 }
