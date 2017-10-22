@@ -4,7 +4,7 @@ package program;
 
 
 /**
- * Cette classe fornit des methodes utiles pour le traitements des vecteurs
+ * Cette classe fournit des methodes utiles pour le traitements des vecteurs
  * @author Ryad and moh
  *
  *
@@ -14,8 +14,13 @@ public class VectorHelper {
 	
 	/**
 	 * 	Cette methode trie le tableau "tab" 
+	 *
 	 * 
 	 * @param tab "le tableau qu'on veu trie " 
+	 * 
+	 * <br/><h3>Cas d'utilisation</h3><br/>
+	 * le tableau initial  tab = {5 , 8 , 6 , 1 , 2 , 10 , 7}
+	 * <br/>apres le tri on aura : tab = {1 , 2 , 5 , 6 , 7 , 8 , 10};
 	 */
 	
 	public void tri(int[] tab){
@@ -39,11 +44,20 @@ public class VectorHelper {
 	
 	/**
 	 * Cette methode somme les element de deux tableaux tab1 et tab2 et met le resultat dans tab3 tab3=tab2+tab1
-	 *   
+	 * 
 	 * @param tab1 " le premier tableau a sommer "
 	 * @param tab2 " le deuxieme tableau a sommer "
 	 * @param tab3 " le tableau resultant de la somme de tab1 et tab2 "
 	 * @throws ExeptionTailleDifférente " l'exception a lancer si les deux tableau n'ont pas la méme taille "
+	       
+	       <br/><h3>Cas d'utilisation</h3><br/>
+	 *     <h2>Les deux tableaux : </h2><br/>
+	 *     tab1 = {5 , 8 , 6 , 1 , 2 , 10 , 7}<br/>
+		   tab2 = {4 , 2 , 17 , 9 , 2 , 6 , 8}<br/>
+		   <h2>Le tableaux resultant :</h2> <br/>
+		   tabExpected  = {9,10,23,10,4,16,15}
+	 *          
+	 *             
 	 */
 	
 	public void sommer(int [] tab1,int [] tab2,int [] tab3) throws 
@@ -59,6 +73,10 @@ public class VectorHelper {
 	}
 	/**
 	 * cette methode inverse les elements d'un tableau (le dernier elem devient le premier...)
+	 * <br/><h3>Cas d'utilisation</h3><br/>
+	 * le tableau initial  tab = {5 , 8 , 6 , 1 , 2 , 10 , 7}
+	 * <br/>apres l'inversion on aura : tab = {7,10,2,1,6,8,5};
+	 * 
 	 * @param tab " le tableau a inverser "
 	 */
 	public void inverser(int[] tab)
@@ -77,11 +95,16 @@ public class VectorHelper {
 	}
 	/**
 	 * cette methode retourne dans un tableau le max et le min du tableau tab
+	 * 
+	 * 
 	 * @param tab " le tableau des donnees "
 	 * @param t " t[0] contient le minimum, t[1] contient le maximum "
+	 * <br/><h3>Cas d'utilisation</h3><br/>
+	 * le tableau initial  tab = {5 , 8 , 6 , 1 , 2 , 10 , 7}
+	 * <br/> la methode retourne un tableau de 2 cases t={1,10} (case1=min, case2=max)
 	 */
 	public void maxMin(int[] tab,int[] t)
-	{
+	{    
 		
 		if (tab.length!=0)
 		{
@@ -131,6 +154,10 @@ public class VectorHelper {
 	 * @param tab " le tableau qu' on doit modifier les elements " 
 	 * @param form " la formule de modification "
 	 * cette methode applique la formule  form sur tous les elements du tableau tab
+	 *<br/><h3>Cas d'utilisation</h3> <br/>
+	 * tableau initial tab={0,1,6,8,10,12}<br/>
+		le resultat sera  tabExepcted={0,2,12,16,20,24} si la formule est i -> i*2(2eme param)
+		
 	 */
 	public void appliquerFormuleVect(int[] tab,formule form)
 	{
